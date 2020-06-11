@@ -10,13 +10,14 @@ const baseString = [...allCapsAlpha,...allLowerAlpha];
 const baseNumber = [...allNumbers];
 const baseASCII = [...allUniqueChars];
 
-const generator = (dbase, len) => {
-   return [...Array(len)]
-     .map(i => dbase[Math.random()*dbase.length|0])
-     .join('');
+const generator = (dbase, len, res='') => {    
+    for( var i = 0;i<len;i++){
+        res += dbase[Math.random()*dbase.length|0]; 
+    }
+    return res;
 };
 
-var PasswordGen = {
+const PasswordGen = {
     Number : (function (len = 8) {
         return generator(baseNumber, len)
     }),
@@ -31,4 +32,12 @@ var PasswordGen = {
     }),
 };
 
-debug.error(PasswordGen.Full(15));
+debug.info(allCapsAlpha);
+// debug.info(base);
+// debug.info(baseASCII);
+// debug.info(baseString);
+// debug.info(baseNumber);
+// debug.done('');
+// debug.done(base[Math.random()*base.length|0]);
+// debug.done('');
+// debug.error(PasswordGen.Full(15));
