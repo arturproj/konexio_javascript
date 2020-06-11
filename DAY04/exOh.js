@@ -1,12 +1,12 @@
 var exOh = (function(string){
-    string = string.split("");
+    string = [...string];
     list = {
         x : 0,
         y : 0
     };
     string.forEach((ls) => {
-       if( ls === 'x' ){list.x=list.x+1;}
-       if( ls === 'o' ){list.y=list.y+1;}
+       if( ls === 'x' ) list.x++;
+       if( ls === 'o' ) list.y++;
     });
     console.log('x :',list.x);
     console.log('o :',list.y);
@@ -16,3 +16,6 @@ var exOh = (function(string){
 console.log(
     exOh('xooxxxxooxo')
     );
+    console.log(
+        exOh('xooxxxxooxoo')
+        );
