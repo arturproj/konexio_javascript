@@ -1,3 +1,4 @@
+// Beta*
 var crypto = require('crypto');
 
 var crypter = {

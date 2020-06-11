@@ -1,4 +1,4 @@
-var debug = require('../module/debug.js');
+var debug = require('../module/method/debug.js');
 
 var square = (function(x){
     if( parseInt(x) ){

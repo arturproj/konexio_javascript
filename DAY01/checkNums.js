@@ -1,4 +1,4 @@
-var debug = require('../module/debug.js');
+var debug = require('../module/method/debug.js');
 
 class todo {
     constructor(n1,n2) {
