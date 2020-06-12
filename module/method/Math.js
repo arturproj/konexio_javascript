@@ -6,7 +6,6 @@ Math.pow = (function(num, power){
 Math.sqrt = (function(num){var sum;
     for (let i = 0; i < num; i++) {
         sum = num / i;
-        //debug.info( 'sqrt::sum : ' + sum );
         if( sum == i ){
             break;
         }            
@@ -22,8 +21,8 @@ Math.round = (function(num){
     return res;  
 });
 
-// debug.info( 'pow : ' + Math.pow(3,3) );
-// debug.info( 'round : ' + Math.round(3.4) +' | '+ Math.round(3.7) );
-// debug.info( 'sqrt : ' + Math.sqrt(144) );
+debug.done( 'pow : ' + Math.pow(3,3) );
+debug.info( 'round : ' + Math.round(3.4) +' | '+ Math.round(3.7) );
+debug.error( 'sqrt : ' + Math.sqrt(144) );
 
 module.exports = Math;

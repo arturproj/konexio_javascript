@@ -3,8 +3,16 @@ var debug = require('../module/method/debug.js');
 class todo {
     constructor(foods) {
         // forEach Array
-/*         foods.forEach((food) => {
-            debug.info('Each food : '+food); 
+/*         foods.forEach((myItemInArray) => {
+            console.log('my Item In Array: ',myItemInArray); 
+        }); */
+/*         foods.forEach((myItem, myIndex) => {
+            console.log('my Item In Array: ',myIndex+ ' | ' +myItem); 
+        }); */
+/*         foods.forEach((myItem, myIndex,myMap) => {
+            console.log('my Index In Array: ',myIndex); 
+            console.log('my Item In Array: ',myItem); 
+            console.log('my Map In Array: ',myMap); 
         }); */
         //debug.error('////////////=================');
         // forEach key in Array

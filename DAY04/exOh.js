@@ -1,15 +1,29 @@
 var exOh = (function(string){
     string = [...string];
-    list = {
-        x : 0,
-        y : 0
+    var list = {
+        x: 0,
+        y:0,
+        get getX() {
+            return this.x;
+        },
+        get getY() {
+            return this.y;
+        },
+        get X() {
+            this.x++;
+        },
+        get Y() {
+            this.y++;
+        }
     };
-    string.forEach((ls) => {
-       if( ls === 'x' ) list.x++;
-       if( ls === 'o' ) list.y++;
-    });
-    console.log('x :',list.x);
-    console.log('o :',list.y);
+
+    for (var key in string) {
+        if( string[key] != 'x' && string[key] != 'o' ) break;
+        if( string[key] === 'x' ) list.X;
+        if( string[key] === 'o' ) list.Y;
+    }
+    console.log('x :',list.getX);
+    console.log('o :',list.getY);
     return ( list.x === list.y ?  true : false);
 });
 
