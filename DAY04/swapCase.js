@@ -1,3 +1,5 @@
+
+
 function swapCase(string){
     var alfa =      [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ ",..."abcdefghijklmnopqrstuvwxyz"];
     var reverse =   [..."abcdefghijklmnopqrstuvwxyz ",..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
