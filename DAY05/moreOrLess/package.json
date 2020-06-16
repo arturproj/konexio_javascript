@@ -1,0 +1,21 @@
+{
+  "name": "moreorless",
+  "version": "1.0.0",
+  "description": "L’ordinateur tire au sort un nombre entre 1 et 100.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "after"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Artur Dev",
+  "license": "ISC",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
