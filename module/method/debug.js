@@ -1,8 +1,5 @@
 var debug = {
-    text : function(obj){     
-        if( typeof obj == 'object' || typeof obj == 'array' ){                    
-            return JSON.stringify(obj);
-        }     
+    text : function(obj){   
         return obj;
               
     },

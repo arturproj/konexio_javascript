@@ -19,7 +19,7 @@
 // Faire le même exercice en utilisant les expressions régulières (RegExp) pour récupérer la liste des voyelles dans un string.
 
 var vowelCount = (function(string){
-    var spy_string = /[a,e,i,o,u,y]/g; 
+    var spy_string = /[a,e,i,o,u,y]/gi; 
     var res = string.match(spy_string);
     return [res,res.length];
 });
@@ -28,3 +28,6 @@ console.log(
     vowelCount('hello')
     );
 
+    console.log(
+        vowelCount('konexio')
+        );

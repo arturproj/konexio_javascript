@@ -21,8 +21,8 @@ Math.round = (function(num){
     return res;  
 });
 
-debug.done( 'pow : ' + Math.pow(3,3) );
-debug.info( 'round : ' + Math.round(3.4) +' | '+ Math.round(3.7) );
-debug.error( 'sqrt : ' + Math.sqrt(144) );
+// debug.done( 'pow : ' + Math.pow(3,3) );
+// debug.info( 'round : ' + Math.round(3.4) +' | '+ Math.round(3.7) );
+// debug.error( 'sqrt : ' + Math.sqrt(144) );
 
 module.exports = Math;

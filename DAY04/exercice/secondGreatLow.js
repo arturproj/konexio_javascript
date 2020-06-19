@@ -15,9 +15,9 @@
 */
 
 
-function serialise(value){
+let serialise = function (value){
     return [...value[0]];
-}
+};
 let arrayUnique = function(array) {
     return array.filter(function(value, index) {
         return array.indexOf(value) === index;
@@ -28,11 +28,8 @@ function secondGreatLow(array) {
     array = array.map(function (x) { 
         return parseFloat(x);         
     });
-    //console.log('#1',array);
     array = array.sort((a, b) => a - b);
     array = arrayUnique(array);
-    //console.log('#2',array);
-    //console.log('#3',array.length);
     if ( array.length == 0 ) {
         return [0,0];
     } else if ( array.length < 2 ) {
@@ -43,7 +40,12 @@ function secondGreatLow(array) {
 }
 
 function inArgv(input) {
-    return ( Array.isArray(input) && input.length > 1 ) ? secondGreatLow(input) : secondGreatLow(serialise(input));
+    if ( input.length > 0){
+        return ( Array.isArray(input) && input.length > 1 ) ? secondGreatLow(input) : secondGreatLow(serialise(input));
+    }else{
+        return 'N’y a pas de paramètre';
+    }
+   // 
 }
 
 var myArgs = process.argv.slice(2);
@@ -53,3 +55,8 @@ console.log(
         [...myArgs]
         )
 );
+
+// λ node secondGreatLow.js 1648648644544
+// [ 4, 6 ]
+// λ node secondGreatLow.js 1 45 84 17 63 2 45
+// [ 2, 63 ]
