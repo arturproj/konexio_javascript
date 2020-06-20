@@ -15,7 +15,6 @@
 // Output:“gvO Ujnft!”
 function codeGen(sh,alfa){
     var i = 0;var k = alfa.indexOf(sh);var req = [];
-    console.log('k',k)
     while( i < alfa.length ){
         if(k==alfa.length) {k=0;}
         req.push(alfa[k]);
@@ -25,10 +24,8 @@ function codeGen(sh,alfa){
 }
 
 function letterChange(string){
-    var alfa = [..."AbCdEfGhIjKlMnOpQrStUvWxYzaBcDeFgHiJkLmNoPqRsTuVwXyZ"];
-    reverse = codeGen('b',alfa);
-    console.log('alfa',alfa);
-    console.log('reverse',reverse);
+    var alfa = [..."abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+    var reverse = codeGen('b',alfa);
     string = [...string.toString()];
     string.forEach((cht, i) => {
         if( alfa.includes(cht) ){ 
@@ -40,7 +37,5 @@ function letterChange(string){
 var myArgs = process.argv.slice(2);
 
 console.log(
-    letterChange(
-        myArgs.join(' ')
-        )
+    letterChange(myArgs[0])
 );
