@@ -39,3 +39,7 @@ debug.done('////////////=================');
 var num1 = 'banana';
 var num2 = 67;
 powerFuncIter(num1,num2);
+debug.done('////////////=================');    
+var num1 = 2;
+var num2 = -3;
+powerFuncIter(num1,num2);
